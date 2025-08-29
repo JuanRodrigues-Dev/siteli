@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pagina2/pagina alunos/estilos/mobile.css">
+    <link rel="stylesheet" href="/pagina2/pagina alunos/estilos/tablet.css" media="(min-width: 600px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="/pagina2/pagina alunos/estilos/desktop.css" media="(min-width: 1025px)">
+    <title>Desenvolvedores</title>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <a href="/pagina alunos/index.html">
+                <img src="/pagina2/pagina alunos/imagens/logo.png" alt="Logo GamAI">
+            </a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="/pagina2/paginaprincipal/index.html">Home</a></li>
+                <li><a href="/pagina2/paginaoqeia/index.html">O que é IA</a></li>
+                <li><a href="/pagina2/tiposdeia/index.html">Tipos de IA</a></li>
+                <li><a href="/pagina2/evolucaoia/index.html">Evolução IA</a></li>
+                <li><a href="/pagina2/tendencias/index.html">Tendências Futuras</a></li>
+            </ul>
+        </nav>
+        <div id="carrossel">
+            <h2 id="titulo">Desenvolvedores</h2>
+            <div class="slides">
+                <div class="slide active">
+                    <img src="/pagina2/pagina alunos/imagens/WhatsApp Image 2025-08-28 at 15.15.44.jpeg" alt="Dev 1">
+                    <h2>Carlos Vitor</h2>
+                    <p>Front-End Developer</p>
+                </div>
+                <div class="slide">
+                    <img src="/pagina2/pagina alunos/imagens/WhatsApp Image 2025-08-26 at 18.37.21.jpeg" alt="Dev 2">
+                    <h2>Danilo de Oliveira</h2>
+                    <p>Back-End Developer</p>
+                </div>
+                <div class="slide">
+                    <img src="/pagina2/pagina alunos/imagens/WhatsApp Image 2025-08-28 at 08.40.16.jpeg" alt="Dev 3">
+                    <h2>João Paulo Dantas</h2>
+                    <p>Java Developer</p>
+                </div>
+                <div class="slide">
+                    <img src="/pagina2/pagina alunos/imagens/WhatsApp Image 2025-08-28 at 19.14.11.jpeg" alt="Dev 4">
+                    <h2>José Henrique Abílio</h2>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="slide">
+                    <img src="/pagina2/pagina alunos/imagens/WhatsApp Image 2025-08-28 at 14.14.12.jpeg" alt="Dev 5">
+                    <h2>Juan Rodrigues Gomes</h2>
+                    <p>Data Engineer</p>
+                </div>
+                <div class="slide">
+                    <img src="/pagina2/pagina alunos/imagens/WhatsApp Image 2025-08-28 at 15.40.10.jpeg" alt="Dev 6">
+                    <h2>Milena</h2>
+                    <p>Front-End Developer</p>
+                </div>
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+        <footer>
+            <h2>Desenvolvedores</h2>
+            <p>
+                © 2025 | Todos os direitos reservados. Este site foi desenvolvido por - Carlos Victor Anselmo Reis, Danilo de Oliveira Pereira, João Paulo Dantas, José Henrique Abílio, Juan Rodrigues Gomes e Millena Kely da Silva - para fins educacionais e informativos sobre o avanço da Inteligência Artificial. Para dúvidas ou sugestões, entre em contato pelo e-mail: contato@evolucaoia.com.
+            </p>
+            
+        </footer>
+    </div>
+    
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        document.getElementById('prev').onclick = () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        };
+
+        document.getElementById('next').onclick = () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        };
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #312837;
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Cabeçalho */
+#cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background: #1f1f1f;
+  color: white;
+  box-shadow: 0 5px 20px black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #444;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.menu a:hover {
+  color: #ff5a5a;
+}
+
+/* Layout principal */
+#container {
+  display: block;
+  max-width: 900px;
+  margin: 40px auto;
+  width: 90%;
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#a {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Títulos */
+h1, h2 {
+  font-family: "Texturina", serif;
+  margin-bottom: 15px;
+  color: #ff6a6a;
+}
+
+/* Imagem centralizada e menor */
+.girl-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+}
+
+/* Lista de tendências */
+.lista-banner {
+  list-style: none;
+  padding: 0;
+}
+.lista-banner li {
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 6px;
+}
+.lista-banner strong {
+  color: #ff6a6a;
+}
+
+/* Rodapé */
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 2px solid #444;
+}
+footer h2 {
+  margin-bottom: 10px;
+  color: #ff6a6a;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  #container {
+    max-width: 98vw;
+    margin: 20px auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #logo {
+    width: 80px;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  #container {
+    padding: 10px;
+  }
+  .girl-img {
+    width: 50px;
+  }
+}

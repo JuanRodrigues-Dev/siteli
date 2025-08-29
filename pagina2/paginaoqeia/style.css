@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #312837;
+  color: white;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+#cabecalho {
+  background-color: #1f1f1f;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#logo {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Menu centralizado e responsivo */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #444;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.menu a:hover {
+  color: #ff5a5a;
+  text-decoration: underline;
+}
+
+/* Layout principal */
+#container {
+  display: block;
+  max-width: 900px;
+  margin: 40px auto;
+  width: 90%;
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#a {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Conteúdo */
+h1, h2 {
+  font-family: "Texturina", serif;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #ff6a6a;
+}
+
+.highlight {
+  color: #ff6a6a;
+  font-weight: bold;
+}
+
+.right-img {
+  float: right;
+  margin: 10px;
+  max-width: 150px;
+}
+.left-img {
+  float: left;
+  margin: 10px;
+  max-width: 150px;
+}
+.clear {
+  clear: both;
+}
+
+/* Cards */
+.card {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+}
+
+/* Rodapé */
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 2px solid #444;
+}
+footer h2 {
+  margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  #container {
+    max-width: 98vw;
+    margin: 20px auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #logo {
+    width: 80px;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  #container {
+    padding: 10px;
+  }
+  .right-img, .left-img {
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+}

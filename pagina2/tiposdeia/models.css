@@ -1,0 +1,114 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #312837;
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Cabeçalho */
+#cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+#cabecalho img {
+  width: 100px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #444;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.menu a:hover {
+  color: #ff5a5a;
+}
+
+/* Layout principal */
+#container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+}
+
+h1, h2 {
+  font-family: "Texturina", serif;
+  margin: 20px 0 10px;
+  color: #ff6a6a;
+}
+
+/* Listas */
+.ulNames, .ulLinks {
+  list-style: none;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+.ulNames li, .ulLinks li {
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.ulLinks a {
+  color: #ff5a5a;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.ulLinks a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 2px solid #444;
+}
+footer h2 {
+  margin-bottom: 10px;
+}
+footer .nomes {
+  margin: 3px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #cabecalho img {
+    width: 80px;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  #container {
+    padding: 15px;
+  }
+}
